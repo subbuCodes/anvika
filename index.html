@@ -38,8 +38,8 @@ label{display:block;margin:12px 0 4px;font-weight:600}input,textarea,select{widt
 <div class="card hosts"><p class="sub">With best compliments &amp; warm invitations from</p><p><b>Yerneni Satish Kumar &amp; Amareswari</b></p><p><b>Mullapudi Bhaskara Rao &amp; Anuradha</b></p><p class="gv">Mullapudi &amp; Yerneni Family</p></div>
 </div><div class="border"></div>
 <script>
-// Google Form currently REQUIRES Adults even for "No". Until that's made optional, "No" replies send Adults=1 behind the scenes.
-const FORM_REQUIRES_ADULTS_ON_NO=true;
+// Adults is optional in the Google Form; "No" replies omit counts.
+const FORM_REQUIRES_ADULTS_ON_NO=false;
 const radios=[...f.querySelectorAll('input[name="entry.284950458"]')];
 function sync(){const no=radios.find(r=>r.checked)?.value==='No';counts.style.display=no?'none':'';ad.required=!no;}
 radios.forEach(r=>r.onchange=sync);
