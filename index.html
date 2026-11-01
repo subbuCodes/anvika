@@ -31,13 +31,20 @@ label{display:block;margin:12px 0 4px;font-weight:600}input,textarea,select{widt
 <label>Your name / family name</label><input name="entry.768406853" required>
 <label>Phone</label><input name="entry.1584917415" required type="tel" inputmode="tel">
 <label>Will you join us?</label><div class="opts"><label><input type="radio" name="entry.284950458" value="Yes" required><span>Yes</span></label><label><input type="radio" name="entry.284950458" value="Maybe"><span>Maybe</span></label><label><input type="radio" name="entry.284950458" value="No"><span>Sorry, no</span></label></div>
-<div class="row"><div><label>Adults</label><select name="entry.1664609802"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></div><div><label>Kids</label><select name="entry.1015671869"><option value="" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div></div>
+<div class="row" id="counts"><div><label>Adults</label><select id="ad" name="entry.1664609802" required><option value="" selected>Select</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></div><div><label>Kids</label><select name="entry.1015671869"><option value="" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div></div>
 <label>A message or blessing for Anvika</label><textarea name="entry.131874501" rows="3"></textarea>
 <button>Send RSVP</button></form><div id="ok"><p class="gv">Thank you!</p><p>Your reply is in. We can't wait to see you.</p></div></div>
 <div class="thumbs"><img src="Anvika_Kalamkari.jpg" alt=""><img src="Anvika_Cheriyal.jpg" alt=""><img src="Anvika_Kondapalli.jpg" alt=""></div>
 <div class="card hosts"><p class="sub">With best compliments &amp; warm invitations from</p><p><b>Yerneni Satish Kumar &amp; Amareswari</b></p><p><b>Mullapudi Bhaskara Rao &amp; Anuradha</b></p><p class="gv">Mullapudi &amp; Yerneni Family</p></div>
 </div><div class="border"></div>
-<script>let sent=0;f.onsubmit=()=>{const b=f.querySelector('button');b.disabled=1;b.textContent='Sending…';sent=1;
-f.querySelectorAll('select').forEach(x=>{if(!x.value)x.disabled=1});setTimeout(()=>{if(sent){f.style.display='none';ok.style.display='block'}},2500)};
+<script>
+// Google Form currently REQUIRES Adults even for "No". Until that's made optional, "No" replies send Adults=1 behind the scenes.
+const FORM_REQUIRES_ADULTS_ON_NO=true;
+const radios=[...f.querySelectorAll('input[name="entry.284950458"]')];
+function sync(){const no=radios.find(r=>r.checked)?.value==='No';counts.style.display=no?'none':'';ad.required=!no;}
+radios.forEach(r=>r.onchange=sync);
+let sent=0;f.onsubmit=()=>{const no=radios.find(r=>r.checked)?.value==='No';const b=f.querySelector('button');b.disabled=1;b.textContent='Sending…';sent=1;
+const sels=f.querySelectorAll('select');if(no){sels.forEach(x=>x.value='');if(FORM_REQUIRES_ADULTS_ON_NO)ad.value='1';}
+sels.forEach(x=>{x.disabled=!x.value});setTimeout(()=>{if(sent){f.style.display='none';ok.style.display='block'}},2500)};
 gf.onload=()=>{if(sent){f.style.display='none';ok.style.display='block'}}</script>
 <script>snd.onclick=()=>{vid.muted=false;vid.currentTime=0;vid.play();snd.remove()};vid.onvolumechange=()=>{if(!vid.muted)snd.remove()}</script></body></html>
