@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Anvika's Half Saree Ceremony · Dec 13</title>
-<meta property="og:title" content="Anvika's Half Saree Ceremony · Sun, Dec 13"><meta property="og:description" content="11 AM – 3 PM · Angel Springs Event Center, Georgetown TX · Please RSVP"><meta property="og:image" content="https://subbucodes.github.io/anvika/og.jpg"><meta property="og:url" content="https://subbucodes.github.io/anvika/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
+<title>Anvika's Vonila / Half Saree Ceremony · Dec 13</title>
+<meta property="og:title" content="Anvika's Vonila / Half Saree Ceremony · Sun, Dec 13"><meta property="og:description" content="11 AM – 3 PM · Angel Springs Event Center, Georgetown TX · Please RSVP"><meta property="og:image" content="https://subbucodes.github.io/anvika/og.jpg"><meta property="og:url" content="https://subbucodes.github.io/anvika/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <style>
 @font-face{font-family:Ram;src:url(fonts/Ramabhadra-Regular.ttf)}@font-face{font-family:GV;src:url(fonts/GreatVibes-Regular.ttf)}
 @font-face{font-family:Cor;src:url(fonts/CormorantGaramond-VariableFont_wght.ttf);font-weight:300 700}@font-face{font-family:Cor;font-style:italic;src:url(fonts/CormorantGaramond-Italic-VariableFont_wght.ttf)}
@@ -20,14 +20,13 @@ label{display:block;margin:12px 0 4px;font-weight:600}input,textarea,select{widt
 .hosts{text-align:center}.hosts p{margin:4px 0}.gv{font-family:GV;font-size:30px;color:var(--m)}
 .thumbs{display:flex;gap:8px}.thumbs img{width:33%;border-radius:8px;border:1px solid var(--g)}#ok{display:none;text-align:center}
 </style></head><body><div class="border"></div><div class="wrap">
-<header><div class="te">లంగా వోణి వేడుక</div><div class="sub">You're invited to</div><h1>Anvika's Half Saree Ceremony</h1><div class="sub">Langa Voni · Sunday, December 13, 2026</div></header>
-<video src="Anvika_Kalamkari.mp4" poster="Anvika_Kalamkari.jpg" autoplay muted loop playsinline controls></video>
+<header><div class="te">ఓణీల వేడుక</div><div class="sub">You're invited to</div><h1>Anvika's Vonila</h1><div class="sub">Half Saree Ceremony · Sunday, December 13, 2026</div></header>
+<div style="position:relative"><video id="vid" src="invite.mp4" poster="poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video><button id="snd" type="button" style="position:absolute;left:50%;bottom:60px;transform:translateX(-50%);width:auto;margin:0;padding:10px 18px;font-size:17px;opacity:.92">🔊 Tap for sound</button></div>
 <div class="card"><p>Our little Anvika is all grown up! We'd love for you to celebrate her Half Saree ceremony with us. Come bless her, catch up with family and friends, and stay for lunch.</p>
 <h2>When &amp; where</h2><p>🗓 <b>Sunday, Dec 13, 2026</b><br>🕚 <b>11 AM – 3 PM</b> (Central) · lunch included<br>📍 <b>Angel Springs Event Center</b><br>1500 County Road 267, Georgetown, TX 78628</p>
 <div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Angel+Springs+Event+Center+1500+County+Road+267+Georgetown+TX+78628">Get directions</a>
-<a class="btn o" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Anvika%27s+Half+Saree+Ceremony&dates=20261213T170000Z/20261213T210000Z&location=Angel+Springs+Event+Center,+1500+County+Road+267,+Georgetown,+TX+78628">Google Calendar</a>
-<a class="btn o" href="Anvika_Half_Saree.ics">Apple / Outlook (with reminders)</a></div>
-<p class="art" style="margin-top:14px"><img src="venue.jpg" alt="Angel Springs Event Center"></p></div>
+<a class="btn o" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Anvika%27s+Vonila+%28Half+Saree%29+Ceremony&dates=20261213T170000Z/20261213T210000Z&location=Angel+Springs+Event+Center,+1500+County+Road+267,+Georgetown,+TX+78628">Google Calendar</a>
+<a class="btn o" href="Anvika_Half_Saree.ics">Apple / Outlook (with reminders)</a></div></div>
 <div class="card" id="rsvp"><h2>Kindly RSVP</h2><iframe name="gf" id="gf" style="display:none"></iframe><form id="f" action="https://docs.google.com/forms/d/e/1FAIpQLSdvYcAX60bZ9abl1MhLlPU9jl724tICi4YV_8JAyGoShQZkGQ/formResponse" method="POST" target="gf">
 <label>Your name / family name</label><input name="entry.768406853" required>
 <label>Phone</label><input name="entry.1584917415" required type="tel" inputmode="tel">
@@ -41,4 +40,4 @@ label{display:block;margin:12px 0 4px;font-weight:600}input,textarea,select{widt
 <script>let sent=0;f.onsubmit=()=>{const b=f.querySelector('button');b.disabled=1;b.textContent='Sending…';sent=1;
 f.querySelectorAll('select').forEach(x=>{if(!x.value)x.disabled=1});setTimeout(()=>{if(sent){f.style.display='none';ok.style.display='block'}},2500)};
 gf.onload=()=>{if(sent){f.style.display='none';ok.style.display='block'}}</script>
-</body></html>
+<script>snd.onclick=()=>{vid.muted=false;vid.currentTime=0;vid.play();snd.remove()};vid.onvolumechange=()=>{if(!vid.muted)snd.remove()}</script></body></html>
