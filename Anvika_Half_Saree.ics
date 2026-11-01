@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mullapudi Family//Invite//EN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:anvika-half-saree-20261213@mullapudi
+DTSTAMP:20261031T150000Z
+DTSTART:20261213T170000Z
+DTEND:20261213T210000Z
+SUMMARY:Anvika's Half Saree Ceremony
+LOCATION:Angel Springs Event Center\, 1500 County Road 267\, Georgetown\, TX 78628
+DESCRIPTION:Langa Voni Mahotsavam of Chi. Anvika Mullapudi. 11 AM - 3 PM\, lunch included. Directions: https://maps.google.com/?q=Angel+Springs+Event+Center+1500+County+Road+267+Georgetown+TX+78628
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:One month to Anvika's Half Saree Ceremony
+TRIGGER:-P30D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Two weeks to Anvika's Half Saree Ceremony
+TRIGGER:-P14D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
