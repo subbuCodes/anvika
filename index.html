@@ -47,4 +47,7 @@ let sent=0;f.onsubmit=()=>{const no=radios.find(r=>r.checked)?.value==='No';cons
 const sels=f.querySelectorAll('select');if(no){sels.forEach(x=>x.value='');if(FORM_REQUIRES_ADULTS_ON_NO)ad.value='1';}
 sels.forEach(x=>{x.disabled=!x.value});setTimeout(()=>{if(sent){f.style.display='none';ok.style.display='block'}},2500)};
 gf.onload=()=>{if(sent){f.style.display='none';ok.style.display='block'}}</script>
-<script>snd.onclick=()=>{vid.muted=false;vid.currentTime=0;vid.play();snd.remove()};vid.onvolumechange=()=>{if(!vid.muted)snd.remove()}</script></body></html>
+<script>snd.onclick=()=>{vid.muted=false;vid.currentTime=0;vid.play();snd.remove()};vid.onvolumechange=()=>{if(!vid.muted)snd.remove()}</script><!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7f9ff79bb01546f78edb732ecd8188bc"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body></html>
